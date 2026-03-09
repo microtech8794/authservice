@@ -1,0 +1,48 @@
+2026-03-09 00:57:11.428 [main] INFO  c.e.a.AuthserviceApplication - Starting AuthserviceApplication using Java 25.0.1 with PID 29168 (D:\Applications\Temp\authservice\target\classes started by Bikash in D:\Applications\Temp\authservice)
+2026-03-09 00:57:11.435 [main] DEBUG c.e.a.AuthserviceApplication - Running with Spring Boot v4.0.3, Spring v7.0.5
+2026-03-09 00:57:11.436 [main] INFO  c.e.a.AuthserviceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-03-09 00:57:11.684 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-09 00:57:12.363 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-09 00:57:12.496 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interface.
+2026-03-09 00:57:13.115 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 9091 (http)
+2026-03-09 00:57:13.127 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9091"]
+2026-03-09 00:57:13.131 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-09 00:57:13.132 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-09 00:57:13.250 [main] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1744 ms
+2026-03-09 00:57:13.504 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-09 00:57:13.761 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:426fce66-1641-4df2-ba39-242636517c84 user=SA
+2026-03-09 00:57:13.765 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-09 00:57:13.816 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-09 00:57:13.925 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-09 00:57:14.387 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-09 00:57:14.452 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:426fce66-1641-4df2-ba39-242636517c84]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: 426FCE66-1641-4DF2-BA39-242636517C84/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-09 00:57:15.186 [main] DEBUG org.hibernate.SQL - create global temporary table "HTE_User"(rn_ integer not null, id bigint, password varchar(255), role varchar(255), username varchar(255), primary key (rn_)) transactional
+2026-03-09 00:57:15.285 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-09 00:57:15.299 [main] DEBUG org.hibernate.SQL - drop table if exists "User" cascade 
+2026-03-09 00:57:15.301 [main] DEBUG org.hibernate.SQL - drop sequence if exists "User_SEQ"
+2026-03-09 00:57:15.306 [main] DEBUG org.hibernate.SQL - create sequence "User_SEQ" start with 1 increment by 50
+2026-03-09 00:57:15.312 [main] DEBUG org.hibernate.SQL - create table "User" ("id" bigint not null, "password" varchar(255) not null, "role" varchar(255), "username" varchar(255) not null unique, primary key ("id"))
+2026-03-09 00:57:15.316 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-09 00:57:15.406 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-09 00:57:18.187 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-09 00:57:18.188 [main] WARN  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-03-09 00:57:18.240 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-09 00:57:20.010 [main] INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:426fce66-1641-4df2-ba39-242636517c84'
+2026-03-09 00:57:20.066 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9091"]
+2026-03-09 00:57:20.092 [main] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 9091 (http) with context path '/'
+2026-03-09 00:57:20.104 [main] INFO  c.e.a.AuthserviceApplication - Started AuthserviceApplication in 9.227 seconds (process running for 9.724)
+2026-03-09 00:57:35.375 [http-nio-9091-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-09 00:57:35.376 [http-nio-9091-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-09 00:57:35.376 [http-nio-9091-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-03-09 00:58:42.077 [http-nio-9091-exec-1] WARN  c.e.a.config.ExceptionConfig - Bad request [/api/auth/register]: Please fill mandatory fields
